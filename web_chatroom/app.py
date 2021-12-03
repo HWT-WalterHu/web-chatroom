@@ -19,4 +19,8 @@ from web_chatroom.socketioutils import *
 
 if __name__ == '__main__':
     # manager.run()
-    socketio.run(app,host='0.0.0.0')
+    try:
+        socketio.run(app,host='10.0.24.5', port=8080)
+    except Exception as e:
+        socketio.run(app,host='0.0.0.0', port=5000)
+

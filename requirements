@@ -1,0 +1,9 @@
+Flask==1.1.4
+Flask-Login== 0.5.0
+Flask-Migrate==2.7.0
+Flask-Script==2.0.6
+Flask-SocketIO===.1.1
+Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.0
+PyMySQL
+mysql-connector-python-rf
