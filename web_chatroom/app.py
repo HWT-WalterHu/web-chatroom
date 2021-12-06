@@ -21,7 +21,7 @@ from web_chatroom.socketioutils import *
 if __name__ == '__main__':
     # manager.run()
     if sys.argv[1] == 'server':
-        socketio.run(app, host='10.0.24.5 ', port=8080)
+        socketio.run(app, host='10.0.24.5', port=8080)
         print('please visit 82.156.8.254:8080/login')
     else:
         socketio.run(app,host='0.0.0.0', port=5000)
