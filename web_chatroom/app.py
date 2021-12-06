@@ -2,6 +2,7 @@ from web_chatroom import create_app,db
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
 from flask_socketio import SocketIO
+import sys
 
 import eventlet
 app = create_app()
@@ -19,5 +20,10 @@ from web_chatroom.socketioutils import *
 
 if __name__ == '__main__':
     # manager.run()
-    socketio.run(app,host='0.0.0.0', port=5000)
+    if sys.argv[1] == 'server':
+        socketio.run(app, host='10.0.24.5 ', port=8080)
+        print('please visit 82.156.8.254:8080/login')
+    else:
+        socketio.run(app,host='0.0.0.0', port=5000)
+
 
