@@ -24,54 +24,8 @@ body {display: -ms-flexbox;display: -webkit-box;display: flex;-ms-flex-align: ce
 <body>
     <div class="container">
 
+    <h1>新用户注册通道已关闭！请联系管理员申请账号</h1>
 
-        <div class="row flex-nowrap justify-content-between align-items-center mb-3">
-            <div class="col-3 pt-1">
-
-            </div>
-            <div class="col-6 ">
-                {% for error_message in get_flashed_messages() %}
-                    <div class="alert alert-warning" role="alert">
-
-                        {{ error_message }}
-                    </div>
-                {% endfor %}
-                <div class="card ">
-                    <div class="card-header text-center">
-                        用户注册
-                    </div>
-                    <div class="card-body">
-                    <form action="{{ url_for('auth.register') }}" method="post">
-                        <div class="form-group">
-                            <label for="exampleInputUsername">请输入用户名</label>
-                            <input type="text" class="form-control" id="exampleInputUsername" name="username" placeholder="Enter username">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail">请输入邮箱</label>
-                            <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword">请输入密码</label>
-                            <input type="password" class="form-control" id="exampleInputPassword" name="password" placeholder="Password">
-                        </div>
-                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-                        <input type="submit" value="确认注册" class="btn btn-primary">
-                    </form>
-
-                    </div>
-                    <div class="card-footer text-muted text-center">
-                        已经注册？<a href="{{ url_for('auth.login') }}">点击这里</a>登录
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="col-3 d-flex justify-content-end align-items-center">
-
-
-            </div>
         </div>
 
     </div>
