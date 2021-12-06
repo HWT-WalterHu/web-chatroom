@@ -5,5 +5,8 @@ Flask-Script==2.0.6
 Flask-SocketIO==5.1.1
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
+WTForms==2.3.0
+email_validator
+eventlet
 PyMySQL
-mysql-connector-python-rfgi
+mysql-connector-python-rf

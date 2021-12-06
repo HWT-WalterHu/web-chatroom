@@ -15,7 +15,7 @@ class User(UserMixin,db.Model):
     def __init__(self,**kwargs):
         super(User,self).__init__(**kwargs)
         if self.email is not None and self.avatar_url is None:
-            self.avatar_url = 'https://gravatar.com/avatar/'+hashlib.md5(self.email.encode('utf-8')).hexdigest()+'?d=identicon'
+            self.avatar_url = 'https://dn-qiniu-avatar.qbox.me/avatar/'+hashlib.md5(self.email.encode('utf-8')).hexdigest()+'?d=identicon'
 
 
 class Message(db.Model):
