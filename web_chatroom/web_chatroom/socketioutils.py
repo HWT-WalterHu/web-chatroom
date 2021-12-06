@@ -7,7 +7,6 @@ from lxml.html.clean import clean_html
 from flask import render_template
 @socketio.on('new_message')
 def new_message(content):
-    print("\n\n new message \n\n",content)
     message = models.Message(author=current_user._get_current_object(),content=clean_html(content))
     db.session.add(message)
     db.session.commit()

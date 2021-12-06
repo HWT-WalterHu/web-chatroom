@@ -11,7 +11,7 @@ chat = Blueprint('chat', __name__)
 @chat.route('/chat', methods=['GET', "POST"],endpoint='chat')
 @login_required
 def chatroom():
-    if request.method == 'GET':
+    if True:
         message_list = db.session.query(models.Message).order_by(models.Message.id).all()
         message_list.reverse()
         message_list = message_list[:9]
